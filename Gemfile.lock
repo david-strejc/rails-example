@@ -106,6 +106,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
+  unicorn
   jquery-rails
   minitest
   mysql2
