@@ -8,12 +8,12 @@ source $OPENSHIFT_CARTRIDGE_SDK_BASH
 source "/etc/profile.d/rvm.sh"
 
 
-function ruby_with_nodejs_context {
-  case $OPENSHIFT_RUBY_VERSION in
-    1.8) /usr/bin/scl enable nodejs010 "$1" ;;
-    1.9) /usr/bin/scl enable nodejs010 ruby193 "$1" ;;
-  esac
-}
+#function ruby_with_nodejs_context {
+#  case $OPENSHIFT_RUBY_VERSION in
+#    1.8) /usr/bin/scl enable nodejs010 "$1" ;;
+#    1.9) /usr/bin/scl enable nodejs010 ruby193 "$1" ;;
+#  esac
+#}
 
 set -e
 
@@ -42,6 +42,6 @@ fi
 
 pushd ${OPENSHIFT_REPO_DIR} > /dev/null
 echo "exec rake db:migrate RAILS_ENV=${RAILS_ENV:-production}"
-#/usr/local/rvm/rubies/ruby-2.1.2/bin/ruby bundle exec rake db:migrate RAILS_ENV=${RAILS_ENV:-production}
-#bundle exec rake assets:precompile RAILS_ENV=${RAILS_ENV:-production}
+bundle exec rake db:migrate RAILS_ENV=${RAILS_ENV:-production}
+bundle exec rake assets:precompile RAILS_ENV=${RAILS_ENV:-production}
 popd > /dev/null
