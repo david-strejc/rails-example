@@ -42,6 +42,6 @@ fi
 
 pushd ${OPENSHIFT_REPO_DIR} > /dev/null
 echo "exec rake db:migrate RAILS_ENV=${RAILS_ENV:-production}"
-bundle exec rake db:migrate RAILS_ENV=${RAILS_ENV:-production}
+/usr/local/rvm/rubies/ruby-2.1.2/bin/ruby bundle exec rake db:migrate RAILS_ENV=${RAILS_ENV:-production}
 #bundle exec rake assets:precompile RAILS_ENV=${RAILS_ENV:-production}
 popd > /dev/null
