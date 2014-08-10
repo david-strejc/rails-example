@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= puts RUBY_VERSION %>
+
+<div>Ruby version: <%= puts RUBY_VERSION %></div>
+
 <%= yield %>
 
 </body>
