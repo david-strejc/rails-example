@@ -5,8 +5,11 @@
 # ruby, etc.
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
-source "/etc/profile.d/rvm.sh"
 
+if [ -f /etc/profile.d/rvm.sh]
+then
+source "/etc/profile.d/rvm.sh"
+fi
 
 #function ruby_with_nodejs_context {
 #  case $OPENSHIFT_RUBY_VERSION in
