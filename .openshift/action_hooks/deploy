@@ -6,7 +6,7 @@
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
-if [ -f /etc/profile.d/rvm.sh]
+if [ -f /etc/profile.d/rvm.sh ]
 then
 source "/etc/profile.d/rvm.sh"
 fi
